@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Password generator app</title>
 </head>
 <body>
   <div class="container">
     <h3 class="title">Password Generator</h3>
     <section class="pw-box">
-      <span id="pw-field">P4$5W0rD!</span>
-      <span>COPIED<img src="./assets/images/icon-copy.svg" alt="Copy password button"></span>
+      <p id="pw-field">P4$5W0rD!</p>
+      <span>COPIED<img src="./assets/images/icon-copy.svg" alt="Copy password button" ></span>
     </section>
     <form class="param-box">
       <div class="chars-length">
@@ -21,14 +20,22 @@
         <input type="range" min="1" max="15" id="length-slider">
       </div>
       <div class="checkboxes">
-        <input type="checkbox" name="upper-check" id="upper-check">
+        <div class="checkbox">
+          <input type="checkbox" name="upper-check" id="upper-check">
           <label for="upper-check">Include Uppercase Letters</label>
-        <input type="checkbox" name="lower-check" id="lower-check">
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="lower-check" id="lower-check">
           <label for="lower-check">Include Lowercase Letters</label>
-        <input type="checkbox" name="num-check" id="num-check">
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="num-check" id="num-check">
           <label for="num-check">Include Numbers</label>
-        <input type="checkbox" name="sym-check" id="sym-check">
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="sym-check" id="sym-check">
           <label for="sym-check">Include Symbols</label>
+        </div>
       </div>
       <div class="strength-states">
         <span>Strength</span>
@@ -72,5 +79,6 @@
       <button type="submit" id="generate-btn">GENERATE <img src="./assets/images/icon-arrow-right.svg" alt=""></button>
     </form>
   </div>
+  <script src="#"></script>
 </body>
 </html>
