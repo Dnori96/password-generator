@@ -97,7 +97,7 @@ body{
     cursor: default;
 }
 .pw-box span img{
-    cursor: pointer;
+  cursor: pointer;
 }
 .pw-box span img:hover{
     cursor: pointer;
@@ -128,121 +128,129 @@ body{
     font-weight: var(--font-width-def);
     color: var(--green-200);
 }
+
     /* Slider Style */
 input[type=range]{
-  appearance: none;
-  margin: 8px 0 32px 0;
-  width: 100%;
+    appearance: none;
+    margin: 8px 0 32px 0;
+    width: 100%;
 }
 input[type=range]:focus{
-  outline: none;
+    outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track{
-  width: 100%;
-  height: 8px;
-  cursor: pointer;
-  background: var(--grey-850);
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: var(--grey-850);
 }
 input[type=range]::-webkit-slider-thumb{
-  height: 28px;
-  width: 28px;
-  border-radius: 50px;
-  background: var(--grey-200);
-  cursor: pointer;
-  appearance: none;
-  margin-top: -10px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    background: var(--grey-200);
+    cursor: pointer;
+    appearance: none;
+    margin-top: -10px;
+}
+input[type=range]::-webkit-slider-thumb:hover{
+    border: 2px solid var(--green-200);
+    background: var(--grey-850);
 }
 input[type=range]:focus::-webkit-slider-runnable-track{
-  background: var(--grey-850);
+    background: var(--grey-850);
 }
 input[type=range]::-moz-range-track{
-  width: 100%;
-  height: 8px;
-  cursor: pointer;
-  background: var(--grey-850);
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: var(--grey-850);
 }
 input[type=range]::-moz-range-thumb{
-  height: 28px;
-  width: 28px;
-  border-radius: 50px;
-  cursor: pointer;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    cursor: pointer;
 }
 input[type=range]::-ms-track{
-  width: 100%;
-  height: 8px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
 }
 input[type=range]::-ms-fill-lower{
-  background: var(--grey-850);
+    background: var(--grey-850);
 }
 input[type=range]::-ms-fill-upper{
-  background: var(--grey-850);
+    background: var(--grey-850);
 }
 input[type=range]::-ms-thumb{
-  margin-top: 1px;
-  height: 28px;
-  width: 28px;
-  border-radius: 50px;
-  cursor: pointer;
+    margin-top: 1px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    cursor: pointer;
 }
 input[type=range]:focus::-ms-fill-lower{
-  background: var(--grey-850);
+    background: var(--grey-850);
 }
 input[type=range]:focus::-ms-fill-upper{
-  background: var(--grey-850);
+    background: var(--grey-850);
 }
 
 .checkboxes{
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-16);
-  margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-16);
+    margin-bottom: 32px;
 }
 .checkbox{
-  display: flex;
-  align-items: center;
-  gap: var(--gap-16);
-  font-size: var(--font-16);
-  position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-16);
+    font-size: var(--font-16);
+    position: relative;
 }
 .checkbox input[type="checkbox"]{
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--grey-200);
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  background: transparent;
-  transition: background .15s ease, border-color .15s ease;
-  position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--grey-200);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    transition: background .15s ease, border-color .15s ease;
+    position: relative;
+}
+.checkbox input[type="checkbox"]:hover{
+    border: 2px solid var(--green-200);
 }
 .checkbox input[type="checkbox"]:focus-visible{
-  outline: 2px solid var(--green-200);
-  outline-offset: 2px;
+    outline: 2px solid var(--green-200);
+    outline-offset: 2px;
 }
 .checkbox input[type="checkbox"]::before{
-  content: '';
-  width: 14px;
-  height: 12px;
-  mask: url('./assets/images/icon-check.svg') center/contain no-repeat;
-  background: var(--grey-850);
-  transform: scale(0);
-  transition: transform .1s ease;
+    content: '';
+    width: 14px;
+    height: 12px;
+    mask: url('./assets/images/icon-check.svg') center/contain no-repeat;
+    background: var(--grey-850);
+    transform: scale(0);
+    transition: transform .1s ease;
 }
 .checkbox input[type="checkbox"]:checked{
-  background: var(--green-200);
-  border-color: var(--green-200);
+    background: var(--green-200);
+    border-color: var(--green-200);
 }
 .checkbox input[type="checkbox"]:checked::before{
-  transform: scale(1);
+    transform: scale(1);
 }
 .checkbox label{
-  cursor: pointer;
-  user-select: none;
+    cursor: pointer;
+    user-select: none;
 }
 
 .strength-states{
@@ -255,7 +263,6 @@ input[type=range]:focus::-ms-fill-upper{
     font-weight: var(--font-width-def);
     padding: var(--padding-16);
     margin-bottom: 16px;
-    position: relative;
 }
 .strength-states span {
     font-size: var(--font-16);
@@ -267,10 +274,12 @@ input[type=range]:focus::-ms-fill-upper{
 .weak,
 .medium,
 .strong{
-    position: absolute;
-    right: 16px;
-    top: 18px;
+    display: flex;
+    gap: var(--gap-8);
+    align-items: center;
+    font-size: var(--gap-16);
 }
+
 .too-weak,
 .weak,
 .medium,
@@ -278,18 +287,56 @@ input[type=range]:focus::-ms-fill-upper{
     display: none;
 }
 
-.empty span *{
+.empty span {
     height: 28px;
     width: 10px;
-    border: 2px solid white;
+    border: 2px solid var(--grey-200);
+    /* Default */
+}
+.too-weak .a{
+    height: 28px;
+    width: 10px;
+    background: var(--red-500);
+}
+.too-weak .n{
+    height: 28px;
+    width: 10px;
+    border: 2px solid var(--grey-200);
 }
 
+.weak .a{
+    height: 28px;
+    width: 10px;
+    background: var(--orange-400);
+}
+.weak .n{
+    height: 28px;
+    width: 10px;
+    border: 2px solid var(--grey-200);
+}
+
+.medium .a{
+    height: 28px;
+    width: 10px;
+    background: var(--yellow-300);
+}
+.medium .n{
+    height: 28px;
+    width: 10px;
+    border: 2px solid var(--grey-200);
+}
+.strong .a{
+    height: 28px;
+    width: 10px;
+    background: var(--green-200);
+}
 
 
 button{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background: var(--green-200);
     color: var(--grey-950);
     font-weight: var(--font-width-def);
@@ -300,7 +347,20 @@ button{
     border-radius: 0;
     cursor: pointer;
 }
-button img {
+button img{
     height: 12px;
     width: 12px;
+}
+#arrow-hover{
+    position: absolute;
+}
+button:hover{
+    background: transparent;
+    border: 2px solid var(--green-200);
+    color: var(--green-200);
+}
+button img:hover {
+    height: 12px;
+    width: 12px;
+    color: var(--green-200);
 }

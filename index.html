@@ -17,7 +17,7 @@
     <form class="param-box">
       <div class="chars-length">
         <p>Character Length <span>0</span></p>
-        <input type="range" min="1" max="15" id="length-slider">
+        <input type="range" min="5" max="15" id="length-slider">
       </div>
       <div class="checkboxes">
         <div class="checkbox">
@@ -41,42 +41,42 @@
         <span>Strength</span>
         <div class="states">
           <div class="empty">
-            <span>0</span>
-            <span>0</span>
-            <span>0</span>
-            <span>0</span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
           <div class="too-weak">
             <pre>TOO WEAK!</pre>
-            <span>1</span>
-            <span>0</span>
-            <span>0</span>
-            <span>0</span>
+            <span class="a"></span>
+            <span class="n"></span>
+            <span class="n"></span>
+            <span class="n"></span>
           </div>
           <div class="weak">
             <pre>WEAK</pre>
-            <span>1</span>
-            <span>1</span>
-            <span>0</span>
-            <span>0</span>
+            <span class="a"></span>
+            <span class="a"></span>
+            <span class="n"></span>
+            <span class="n"></span>
           </div>
           <div class="medium">
             <pre>MEDIUM</pre>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
-            <span>0</span>
+            <span class="a"></span>
+            <span class="a"></span>
+            <span class="a"></span>
+            <span class="n"></span>
           </div>
           <div class="strong">
             <pre>STRONG</pre>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
-            <span>1</span>
+            <span class="a"></span>
+            <span class="a"></span>
+            <span class="a"></span>
+            <span class="a"></span>
           </div>
         </div>
       </div>
-      <button type="submit" id="generate-btn">GENERATE <img src="./assets/images/icon-arrow-right.svg" alt=""></button>
+      <button type="submit" id="generate-btn">GENERATE <img src="./assets/images/icon-arrow-right.svg" id="arrow-not-hover"><img src="./assets/images/bx-arrow-to-left-green.svg" id="arrow-hover"></button>
     </form>
   </div>
   <script src="#"></script>
