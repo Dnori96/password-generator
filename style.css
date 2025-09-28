@@ -139,7 +139,7 @@ body{
     font-weight: var(--font-width-def);
     color: var(--green-200);
 }
-.chars-length span{
+.chars-length #Really{
     margin-bottom: 2px;
     color: var(--yellow-300);
     visibility: hidden; /* For Slider 0 */
