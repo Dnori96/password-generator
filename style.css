@@ -352,7 +352,8 @@ button img{
     width: 12px;
 }
 #arrow-hover{
-    position: absolute;
+    display: none;
+    right: 88px;
 }
 button:hover{
     background: transparent;
