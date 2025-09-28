@@ -11,30 +11,30 @@
   <div class="container">
     <h3 class="title">Password Generator</h3>
     <section class="pw-box">
-      <input id="pw-field" placeholder="P4$5W0rD!" type="text" readonly>
+      <input id="pw-field" placeholder="P4$5W0rD!" type="text" value="" readonly>
       <span>COPIED<img src="./assets/images/icon-copy.svg" alt="Copy password button" ></span>
     </section>
     <form class="param-box">
       <div class="chars-length">
         <p>Character Length <span id="slide-num">5</span></p>
         <input type="range" min="0" max="20" value="5" id="length-slider">
-        <span id="Really">Really... 😑</span>
+        <span id="really">Really... 😑</span>
       </div>
       <div class="checkboxes">
         <div class="checkbox">
-          <input type="checkbox" name="upper-check" id="upper-check">
+          <input type="checkbox" name="upper-check" id="upper-check" class="checks">
           <label for="upper-check">Include Uppercase Letters</label>
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="lower-check" id="lower-check">
+          <input type="checkbox" name="lower-check" id="lower-check" class="checks">
           <label for="lower-check">Include Lowercase Letters</label>
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="num-check" id="num-check">
+          <input type="checkbox" name="num-check" id="num-check" class="checks">
           <label for="num-check">Include Numbers</label>
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="sym-check" id="sym-check">
+          <input type="checkbox" name="sym-check" id="sym-check" class="checks">
           <label for="sym-check">Include Symbols</label>
         </div>
         <p id="error-checkbox">Check at least one</p>
