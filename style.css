@@ -404,8 +404,42 @@ button img:hover {
     height: 80px;
     font-size: var(--font-24);
     }
+    .param-box{
+        height: 490px;
+    }
+    .strength-states span{
+        font-size: 18px;
+    }
+    .checkbox{
+        font-size: 18px;
+    }
+    #really {
+        font-size: var(--font-22);
+        margin-bottom: var(--gap-8);
+    }
+    .chars-length p{
+        font-size: 18px;
+    }
+    .empty,
+    .too-weak,
+    .weak,
+    .medium,
+    .strong{
+        font-size: 18px;
+    }
+    .strength-states{
+        height: 72px;
+    }
+    button{
+        height: 72px;
+        font-size: 18px;
+    }
+    button img{
+        height: 14px;
+        width: 14px;
+    }
 }
 
 .container{
-    transition: width 0.2s ease-out;
+    transition: width 0.2s ease;
 }
