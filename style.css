@@ -420,6 +420,9 @@ button img:hover {
     .chars-length p{
         font-size: 18px;
     }
+    .chars-length p span{
+        font-size: var(--font-32);
+    }
     .empty,
     .too-weak,
     .weak,
