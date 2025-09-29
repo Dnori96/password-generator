@@ -21,28 +21,73 @@ const generateBtn = document.querySelector("#generate-btn");
         validGen();
     });
 
-function getValues(rawValPass) {
+function getValues() {
 
-    const upperLetrs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowerLetrs = "abcdefghijklmnopqrstuvwxyz";
-    const numbers = "0123456789";
-    const specialChars = "!@#$%^&*()-_=+[]{}|;:',.<>?/`~";
-    const passwordField = document.querySelector("#pw-field");
+    let upperLetrs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let lowerLetrs = "abcdefghijklmnopqrstuvwxyz";
+    let numbers = "0123456789";
+    let specialChars = "!@#$%^&*-_=+;:,.<>?~";
+    let passwordField = document.querySelector("#pw-field");
 
-    function genPassWord() {}
-    let randomNumGen = Math.floor(Math.random() * (slider.value + slider.value)) + 1;
-    passwordField.value = randomNumGen;
+    let upperValid = false;
+    let lowerValid = false;
+    let numValid = false;
+    let spcValid = false;
+    let password = "";
+    let allowedChars = "";
 
-}
+        const upperCheck = document.querySelector('#upper-check'); 
+        const lowerCheck = document.querySelector('#lower-check'); 
+        const numCheck = document.querySelector('#num-check'); 
+        const spcCheck = document.querySelector('#sym-check');
+
+        if (upperCheck.checked) {
+            allowedChars += upperLetrs;
+            upperValid = true;
+        } else {
+            upperLetrs = "";
+        }
+        if (lowerCheck.checked) {
+            allowedChars += lowerLetrs;
+            lowerValid = true;
+        } else {
+            lowerLetrs = "";
+        }
+        if (numCheck.checked) {
+            allowedChars += numbers;
+            numValid = true;
+        } else {
+            numbers = "";
+        }
+        if (spcCheck.checked) {
+            allowedChars += specialChars;
+            spcValid = true;
+        } else {
+            specialChars = "";
+        }
+    
+    function genPassWord(length) {
+
+            for (let i = 0; i < length; i++) {
+                const randomIdx = Math.floor(Math.random() * allowedChars.length);
+                password += allowedChars[randomIdx]
+                passwordField.value = password;
+            }
+
+            
+    }
+
+    genPassWord(slider.value)
+};
 
 function validGen() {
 
-    const checkForEach = document.querySelectorAll('.checks');
+    const checkBoxes = document.querySelectorAll('.checks');
     const reallyTXT = document.querySelector("#really");
 
     let isValid = true;
 
-        checkForEach.forEach(check => {
+        checkBoxes.forEach(check => {
 
             if (check.checked === false) {
                 
@@ -65,6 +110,6 @@ function validGen() {
 
             }
 
-        return (isValid === true) ? getValues(check) : isValid;
+        return (isValid === true) ? getValues() : isValid;
         });
 }
