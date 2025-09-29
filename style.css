@@ -386,3 +386,26 @@ button img:hover {
     width: 12px;
     color: var(--green-200);
 }
+
+@media (min-width: 570px) {
+
+    body{
+        height: 100vh;
+    }
+    .container{
+        height: 678px;
+        width: 540px;
+    }
+    .pw-box input{
+        width: 450px;
+        font-size: var(--font-32);
+    }
+    .pw-box{
+    height: 80px;
+    font-size: var(--font-24);
+    }
+}
+
+.container{
+    transition: width 0.2s ease-out;
+}
