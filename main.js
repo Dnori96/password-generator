@@ -73,18 +73,21 @@ function getPassword() {
     } else {
         upperLetrs = "";
     }
+
     if (lowerCheck.checked) {
         allowedChars += lowerLetrs;
         lowerValid = true;
     } else {
         lowerLetrs = "";
     }
+
     if (numCheck.checked) {
         allowedChars += numbers;
         numValid = true;
     } else {
         numbers = "";
     }
+
     if (spcCheck.checked) {
         allowedChars += specialChars;
         spcValid = true;
@@ -136,4 +139,19 @@ function validGen() {
 
         return isValid === true ? getPassword() : isValid;
     });
+}
+
+function copyTextFunc() {
+    copyText = document.querySelector("#pw-field");
+    textWhenCopy = document.querySelector("#copy-txt");
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile
+
+    navigator.clipboard.writeText(copyText.value);
+
+    textWhenCopy.textContent = "COPIED";
+    setTimeout(() => {
+        textWhenCopy.textContent = "";
+    }, 1500);
 }

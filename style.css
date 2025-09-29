@@ -102,15 +102,14 @@ body{
     position: absolute;
     display: flex;
     align-items: center;
-    gap: var(--gap-8);
     color: var(--green-200);
     cursor: default;
-    right: var(--padding-16);
+    right: 42px;
 }
-.pw-box span img{
+.pw-box img{
   cursor: pointer;
 }
-.pw-box span img:hover{
+.pw-box img:hover{
     cursor: pointer;
     filter: grayscale();
 }
