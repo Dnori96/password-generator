@@ -21,15 +21,23 @@ const generateBtn = document.querySelector("#generate-btn");
         validGen();
     });
 
-function genPassWord(rawValPass) {
+function getValues(rawValPass) {
 
+    const upperLetrs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerLetrs = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const specialChars = "!@#$%^&*()-_=+[]{}|;:',.<>?/`~";
+    const passwordField = document.querySelector("#pw-field");
+
+    function genPassWord() {}
+    let randomNumGen = Math.floor(Math.random() * (slider.value + slider.value)) + 1;
+    passwordField.value = randomNumGen;
 
 }
 
 function validGen() {
 
     const checkForEach = document.querySelectorAll('.checks');
-    const errorMSG = document.querySelector("#error-checkbox");
     const reallyTXT = document.querySelector("#really");
 
     let isValid = true;
@@ -37,25 +45,26 @@ function validGen() {
         checkForEach.forEach(check => {
 
             if (check.checked === false) {
-                errorMSG.style.visibility = "visible";
                 
                 isValid = false;                
 
             }
+
             if (slider.value < 3) {
                 reallyTXT.style.visibility = "visible";
                 
                 isValid = false;
 
-            }
-            if (check.checked) {
-                errorMSG.style.visibility = "hidden";
+            } else {
                 reallyTXT.style.visibility = "hidden";
+            }
+
+            if (check.checked) {
                 
                 isValid = true;
 
             }
 
-        return (isValid === true) ? genPassWord(check) : isValid;
+        return (isValid === true) ? getValues(check) : isValid;
         });
 }
