@@ -21,12 +21,40 @@ generateBtn.addEventListener("click", (e) => {
     validGen();
 });
 
+function passwordSTR(pwLength, upperValid, lowerValid, numValid, spcValid) {
+    const empty = document.querySelector(".empty");
+    const tooWeak = document.querySelector(".too-weak");
+    const weak = document.querySelector(".weak");
+    const medium = document.querySelector(".medium");
+    const strong = document.querySelector(".strong");
+
+    empty.style.display = "none";
+    tooWeak.style.display = "none";
+    weak.style.display = "none";
+    medium.style.display = "none";
+    strong.style.display = "none";
+
+    if (pwLength <= 5) {
+        tooWeak.style.display = "flex";
+    } else if (pwLength > 5 && pwLength < 8) {
+        weak.style.display = "flex";
+    } else if (pwLength >= 8 && pwLength < 12) {
+        medium.style.display = "flex";
+    } else if (pwLength >= 12) {
+        strong.style.display = "flex";
+    } else {
+        empty.style.display = "flex";
+    }
+}
+
 function getPassword() {
     let upperLetrs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let lowerLetrs = "abcdefghijklmnopqrstuvwxyz";
     let numbers = "0123456789";
     let specialChars = "!@#$%^&*-_=+;:,.<>?~";
     let passwordField = document.querySelector("#pw-field");
+
+    passwordField.style.color = "#E6E5EA";
 
     let upperValid = false;
     let lowerValid = false;
@@ -72,8 +100,14 @@ function getPassword() {
             password += allowedChars[randomIdx];
             passwordField.value = password;
         }
+        return passwordSTR(
+            password.length,
+            upperValid,
+            lowerValid,
+            numValid,
+            spcValid
+        );
     }
-
     genPassWord(slider.value);
 }
 
