@@ -95,23 +95,25 @@ function getPassword() {
         specialChars = "";
     }
 
-    function genPassWord(length) {
-        let password = "";
-
-        for (let i = 0; i < length; i++) {
-            const randomIdx = Math.floor(Math.random() * allowedChars.length);
-            password += allowedChars[randomIdx];
-            passwordField.value = password;
-        }
-        return passwordSTR(
-            password.length,
-            upperValid,
-            lowerValid,
-            numValid,
-            spcValid
-        );
+    function getRandomInt(max) {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return array[0] % max;
     }
-    genPassWord(slider.value);
+
+    function getPassword() {
+        const length = Number(slider.value);
+        let password = "";
+        for (let i = 0; i < length; i++) {
+            const idx = getRandomInt(allowedChars.length);
+            password += allowedChars[idx];
+        }
+        passwordField.value = password;
+
+        passwordSTR(password.length);
+    }
+
+    getPassword();
 }
 
 function validGen() {
